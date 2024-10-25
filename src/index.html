@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="shortcut icon" href="/asset/image/Logo%20Myst.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--  start font family  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap"
+          rel="stylesheet">
+    <!--  end font family  -->
+
+    <title>Myst Crypto - Dashboard</title>
+</head>
+
+<body>
+
+    <div id="myContainer" class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav class="top_nav">
+                    <div class="left_content">
+                        <div class="logo_section">
+                            <img src="/asset/image/logo.png" alt="">
+                        </div>
+                        <div class="menu_list">
+                            <ul>
+                                <li><a href="#" class="active">Mixer</a></li>
+                                <li><a href="#">Bridge</a></li>
+                                <li><a href="#">Multi send</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right_content">
+
+                        <div class="select-wrapper">
+                            <select id="crypto-select">
+                                <option value="eth">Ethereum</option>
+                                <option value="btc">Bitcoin</option>
+                                <option value="ltc">Litecoin</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="setting_icon">
+                            <img src="/asset/image/setting-icon.png" alt="">
+                        </button>
+                        <a href="#" class="connect_wallet">Connect Wallet</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="col-12">
+                <div class="public_ipfs_gateway wow bounceInDown">
+                    <div class="eye_icon">
+                        <img src="/asset/image/eye.png" alt="">
+                    </div>
+                    <div class="content">
+                        <p>
+                            You are using a public IPFS gateway. Stealth Mixer dApp can not use all security features of your browser. Check out
+                            <a href="#">Landing pages</a>
+                            for alternatives
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="dashboard_content">
+                    <div class="left_content wow bounceInLeft">
+                        <div class="tab_button_section">
+                            <button type="button" class="tab_btn active">Deposit</button>
+                            <button type="button" class="tab_btn">Withdraw</button>
+                            <div class="slider"></div> <!-- Slider for background animation -->
+                        </div>
+
+                        <form action="#">
+                            <div class="main_content_box">
+                                <div class="form_item">
+                                    <label for="token">Token</label>
+                                    <div class="token_select_wrapper">
+                                        <select name="token" id="token" class="token_select">
+                                            <option value="ethereum">Ethereum</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form_item">
+                                    <div class="label_amount" for="amount">
+                                        Amount
+                                        <span>
+                                            <img src="/asset/image/info-circle.png" alt="">
+                                        </span>
+                                    </div>
+
+                                    <div class="amount_content">
+                                        <div class="amount_value">
+                                            <p class="text_info">You send</p>
+                                            <p class="value_info">0</p>
+                                            <p class="sub_value_info">0</p>
+                                        </div>
+                                        <div class="select_currency_type">
+                                            <select name="ethereum_select" id="ethereum_select" class="ethereum_select">
+                                                <option value="ethereum">Ethereum</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="connect_submit_button">Connect</button>
+                        </form>
+                    </div>
+
+
+                    <div class="right_content wow bounceInRight">
+                        <div class="statistics-card">
+                            <div class="header">
+                                <h2>Statistics <span class="eth-amount">0.1 ETH</span></h2>
+                            </div>
+                            <div class="border_bottom"></div>
+
+                            <div class="anonymity">
+                                <p>
+                                    Anonymity Set
+                                    <span>
+                                        <img src="/asset/image/information-circle-sharp.png" alt="">
+                                    </span>
+                                </p>
+                                <p class="user-deposits"><span>32518</span> equal user deposits</p>
+                            </div>
+                            <div class="latest-deposits">
+                                <h3>Latest Deposits</h3>
+                                <ul>
+                                    <li>27584. 2 years ago</li>
+                                    <li>27584. 2 years ago</li>
+                                    <li>27584. 2 years ago</li>
+                                    <li>27584. 2 years ago</li>
+                                    <li>27584. 2 years ago</li>
+                                    <li>27584. 2 years ago</li>
+                                    <li>27584. 2 years ago</li>
+                                    <li>27584. 2 years ago</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section_footer">
+        <img src="/asset/image/background.png" alt="">
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

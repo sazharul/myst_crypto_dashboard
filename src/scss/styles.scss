@@ -1,0 +1,669 @@
+body {
+    background: #0C0101;
+}
+
+.top_nav {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+
+    .left_content {
+        display: inline-block;
+        float: left;
+        width: 40%;
+
+        // logo_section
+        .logo_section {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 25px;
+
+            img {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .menu_list {
+            display: inline-block;
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        padding: 15px 10px;
+                        text-decoration: none;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        text-align: left;
+                        color: rgba(255, 255, 255, 1);
+                        position: relative;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: rgba(253, 68, 68, 0.8); /* Slight color change on hover */
+                        }
+
+                        &.active {
+                            color: rgba(253, 68, 68, 1);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .right_content {
+        display: inline-block;
+        float: right;
+        width: 60%;
+        text-align: right;
+
+        .select-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+
+            #crypto-select {
+
+                //styleName: H5-20 Px/Montserrat;
+                font-family: Montserrat;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 18px;
+                text-align: left;
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: rgba(255, 255, 255, 0.1);
+                color: white;
+                border: 2px solid #B30000;
+
+                border-radius: 18px;
+                padding: 15px 40px 15px 45px; /* Adjusted padding to accommodate both logo and arrow */
+                width: 100%;
+                font-size: 16px;
+                outline: none;
+
+                /* Ethereum logo on the left */
+                background-image: url('/asset/image/mdi_ethereum.png'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="white"><polygon points="0,0 140,0 70,70"/></svg>');
+                background-repeat: no-repeat, no-repeat;
+
+                /* Positioning logo on the left and arrow on the right */
+                background-position: 10px center, right 15px center;
+                background-size: 18px, 10px;
+
+                option {
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    background-color: #333333;
+                    color: white;
+                }
+            }
+        }
+
+        #crypto-select:hover,
+        #crypto-select:focus {
+            border-color: #B30000;
+        }
+
+        .setting_icon {
+            display: inline-block;
+            width: 52px;
+            height: 52px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            border: 2px solid #B30000;
+            padding: 0 10px;
+            margin-left: 11px;
+            overflow: hidden; /* Ensures the image doesn't overflow the button */
+
+            img {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+                transition: transform 0.5s ease; /* Smooth animation for rotation */
+            }
+
+            &:hover img {
+                transform: rotate(360deg); /* Spin the image */
+            }
+        }
+
+
+        .connect_wallet {
+            display: inline-block;
+            text-decoration: none;
+            width: 197px;
+            background: linear-gradient(90deg, #B30000 0%, #610000 87%, #550000 100%);
+            border-radius: 18px;
+            margin-left: 11px;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            padding: 12px 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+            &:hover {
+                background: linear-gradient(90deg, #610000 0%, #B30000 87%, #B30000 100%);
+                transform: scale(1.05); /* Slightly enlarge the button */
+                box-shadow: 0px 4px 15px rgba(179, 0, 0, 0.5); /* Soft red glow */
+                cursor: pointer;
+            }
+
+        }
+
+    }
+}
+
+.public_ipfs_gateway {
+    display: inline-block;
+    width: calc(100% - 150px); // 100% width minus 50px on each side
+    background: rgba(12, 1, 1, 1);
+    border: 1px solid #B30000;
+    border-radius: 12px;
+    margin: 0 75px 30px; // 75px space on left and right, 30px bottom
+
+    .eye_icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 79px;
+        height: 71px;
+        float: left;
+        background: linear-gradient(90deg, rgba(85, 0, 0, 0.4) 0%, rgba(179, 0, 0, 0.4) 45%, rgba(85, 0, 0, 0.4) 100%);
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .content {
+        display: flex;
+        align-items: center; // Centers <p> vertically within .content
+        width: calc(100% - 80px);
+        box-sizing: border-box;
+        height: 70px;
+        padding: 0px 25px 0px 15px;
+
+        p {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 0px;
+
+            @media (max-width: 1000px) {
+                font-size: 15px;
+            }
+
+            a {
+                font-family: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+                color: rgba(163, 1, 1, 1);
+            }
+        }
+    }
+}
+
+.dashboard_content {
+    display: inline-block;
+    width: calc(100% - 150px); // 100% width minus 75px on each side
+    // 75px space on left and right, 30px bottom
+    margin: 0 75px 120px;
+
+    .left_content {
+        display: inline-block;
+        width: calc(58% - 25px);
+        float: left;
+        text-align: center;
+
+        .tab_button_section {
+            display: inline-block;
+            width: 59%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #B30000;
+            margin: 0 auto;
+
+            border-radius: 20px;
+            padding: 6px;
+            margin-bottom: 5px;
+
+            position: relative;
+
+            .tab_btn {
+                all: unset; /* Resets all inherited styles */
+                display: inline-block; /* Allows button to be styled as a block element */
+                cursor: pointer; /* Changes cursor to pointer on hover */
+                width: 50%;
+                float: left;
+                height: 45px;
+                //styleName: H6-17Px/Montserrat;
+                font-family: Inter;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 20.4px;
+                text-align: center;
+                color: rgba(255, 255, 255, 1);
+
+                position: relative;
+                z-index: 1; // Keep buttons above the slider
+            }
+
+            .active {
+                border-radius: 14px;
+                background: linear-gradient(180deg, #B30000 0%, #550000 100%);
+            }
+
+            .slider {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 48%;
+                height: 45px;
+                border-radius: 14px;
+                background: linear-gradient(180deg, #B30000 0%, #550000 100%);
+                transition: left 0.3s ease; // Smooth sliding transition
+            }
+        }
+
+        .main_content_box {
+            display: inline-block;
+            width: 100%;
+
+            background-image: url("/asset/image/box_background.png");
+            background-size: 94% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 54px 60px;
+
+            margin-top: -38px;
+            margin-bottom: -25px;
+
+
+            .form_item {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 20px;
+
+                label {
+                    display: inline-block;
+                    width: 100%;
+                    //styleName: H6-17Px/Montserrat;
+                    font-family: Inter;
+                    font-size: 17px;
+                    font-weight: 500;
+                    line-height: 20.4px;
+                    text-align: left;
+                    color: rgba(255, 255, 255, 1);
+                    margin-bottom: 12px;
+                }
+
+                .token_select_wrapper {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+
+                    #token {
+
+                        //styleName: H5-20 Px/Montserrat;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        text-align: left;
+
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        background: rgba(255, 255, 255, 0.1);
+                        color: white;
+                        border: 2px solid #B30000;
+
+                        border-radius: 18px;
+                        padding: 15px 40px 15px 45px; /* Adjusted padding to accommodate both logo and arrow */
+                        width: 100%;
+                        font-size: 16px;
+                        outline: none;
+
+                        /* Ethereum logo on the left */
+                        background-image: url('/asset/image/crypto_icon.png'),
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="white"><polygon points="0,0 140,0 70,70"/></svg>');
+                        background-repeat: no-repeat, no-repeat;
+
+                        /* Positioning logo on the left and arrow on the right */
+                        background-position: 10px center, right 15px center;
+                        background-size: 18px, 10px;
+
+                        option {
+                            font-family: Montserrat;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            text-align: left;
+                            background-color: #333333;
+                            color: white;
+                        }
+                    }
+                }
+
+                #token:hover,
+                #token:focus {
+                    border-color: #B30000;
+                }
+
+                .label_amount {
+                    //styleName: H6-17Px/Montserrat;
+                    font-family: Inter;
+                    font-size: 17px;
+                    font-weight: 500;
+                    line-height: 20.4px;
+                    text-align: left;
+                    color: rgba(255, 255, 255, 1);
+                    margin-bottom: 12px;
+
+                    span {
+                        img {
+
+                        }
+                    }
+                }
+
+                .amount_content {
+                    display: inline-block;
+                    width: 100%;
+                    border-radius: 18px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid #B30000;
+                    padding: 20px;
+                    text-align: left;
+
+                    .amount_value {
+                        display: inline-block;
+                        width: 30%;
+                        float: left;
+
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 21px;
+                        text-align: left;
+                        color: rgba(255, 255, 255, 1);
+
+                        .text_info {
+
+                        }
+
+                        .value_info {
+
+                        }
+
+                        .sub_value_info {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .select_currency_type {
+
+                        position: relative;
+                        display: inline-block;
+                        width: 60%;
+                        float: right;
+                        margin-top: 25px;
+
+                        @media (max-width: 991px) {
+                            width: 70%;
+                        }
+
+                        #ethereum_select {
+
+                            //styleName: H5-20 Px/Montserrat;
+                            font-family: Montserrat;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 18px;
+                            text-align: left;
+
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            background: rgba(255, 255, 255, 0.1);
+                            color: white;
+                            border: 2px solid #B30000;
+
+                            border-radius: 18px;
+                            padding: 15px 40px 15px 45px; /* Adjusted padding to accommodate both logo and arrow */
+                            width: 100%;
+                            font-size: 16px;
+                            outline: none;
+
+                            /* Ethereum logo on the left */
+                            background-image: url('/asset/image/crypto_icon.png'),
+                            url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="white"><polygon points="0,0 140,0 70,70"/></svg>');
+                            background-repeat: no-repeat, no-repeat;
+
+                            /* Positioning logo on the left and arrow on the right */
+                            background-position: 10px center, right 15px center;
+                            background-size: 18px, 10px;
+
+                            option {
+                                font-family: Montserrat;
+                                font-size: 20px;
+                                font-weight: 400;
+                                line-height: 28px;
+                                text-align: left;
+                                background-color: #333333;
+                                color: white;
+                            }
+                        }
+
+                        #ethereum_select:hover,
+                        #ethereum_select:focus {
+                            border-color: #B30000;
+                        }
+                    }
+                }
+            }
+        }
+
+        .connect_submit_button {
+            all: unset;
+            display: inline-block;
+            cursor: pointer;
+            background: linear-gradient(90deg, #550000 0%, #B30000 45%, #550000 100%);
+            border-radius: 18px;
+            width: 60%;
+            height: 56px;
+            font-family: Inter;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 20.4px;
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+            &:hover {
+                background: linear-gradient(90deg, #B30000 0%, #550000 45%, #B30000 100%);
+                transform: scale(1.03); /* Slightly enlarge the button */
+                box-shadow: 0px 4px 10px rgba(179, 0, 0, 0.4); /* Soft glow around button */
+            }
+        }
+    }
+
+    .right_content {
+        display: inline-block;
+        width: 42%;
+        border: 1px solid #B30000;
+        background: rgba(12, 1, 1, 1);
+        border-radius: 34px;
+        padding: 20px;
+        margin-left: 25px;
+        margin-top: 30px;
+
+        .statistics-card {
+            display: inline-block;
+            width: 100%;
+
+            .header {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 20px;
+
+                h2 {
+                    text-align: center;
+                    font-family: Montserrat;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 33.6px;
+                    color: rgba(255, 255, 255, 1);
+                }
+
+                .eth-amount {
+                    display: inline-block;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22.4px;
+                    text-align: left;
+                    color: rgba(255, 255, 255, 1);
+                    background: rgba(255, 255, 255, 0.1);
+                    border: 1px solid;
+                    padding: 4px 8px;
+                    margin-left: 15px;
+                    border-radius: 4px;
+                    border: 1px solid #B30000;
+                }
+            }
+
+            .border_bottom {
+                width: 80%;
+                margin: 0 auto;
+                height: 1px;
+                background: linear-gradient(90deg, rgba(85, 0, 0, 0) 0%, #B30000 50%, rgba(85, 0, 0, 0) 100%);
+                margin-bottom: 20px;
+            }
+
+            .anonymity {
+                display: inline-block;
+                width: 100%;
+
+                p {
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22.4px;
+                    text-align: left;
+                    color: rgba(255, 255, 255, 1);
+                    margin-bottom: 8px;
+
+                    .span {
+                        display: inline-block;
+
+                        img {
+                            margin-left: 15px;
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .user-deposits {
+                    font-family: Montserrat;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 27px;
+                    text-align: left;
+                    color: rgba(255, 255, 255, 1);
+                    margin-bottom: 24px;
+
+                    span {
+                        font-family: Montserrat;
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 27px;
+                        text-align: left;
+                        color: rgba(255, 255, 255, 1);
+                    }
+                }
+            }
+
+            .latest-deposits {
+                display: inline-block;
+                width: 100%;
+
+                h3 {
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22.4px;
+                    text-align: left;
+                    color: rgba(255, 255, 255, 1);
+                    text-align: left;
+                }
+
+                ul {
+                    list-style: none;
+                    padding-left: 0px;
+
+                    li {
+                        width: calc(50% - 12px);
+                        float: left;
+                        margin-right: 12px;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22.4px;
+                        text-align: left;
+                        color: rgba(255, 255, 255, 1);
+                        padding: 4px 8px;
+                        background: rgba(255, 255, 255, 0.1);
+
+                        margin-bottom: 16px;
+                        border-radius: 8px;
+
+                        @media (max-width: 1200px) {
+                            font-size: 12px;
+                        }
+                        @media (max-width: 991px) {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section_footer {
+    display: inline-block;
+    width: 100%;
+
+    img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+}
